@@ -304,11 +304,12 @@
 
   <script>
     (async () => {
+      console.log(`eu\x40${location.hostname}`)
       if (navigator.webdriver || document.visibilityState === 'prerender' || !location.hostname) {
         return;
       }
-      document.querySelector('a[href="/cdn-cgi/l/email-protection"]').innerHTML = `eu\x40${location.hostname}`;
-      document.querySelector('a[href="/cdn-cgi/l/email-protection"]').href = `\x6dailto:eu\x40${location.hostname}`;
+      document.querySelector('a[href="/cdn-cgi/l/email-protection"]').innerHTML = `eu\x40${location.hostname.substr(3)}`;
+      document.querySelector('a[href="/cdn-cgi/l/email-protection"]').href = `\x6dailto:eu\x40${location.hostname.substr(3)}`;
     })();
   </script>
 
