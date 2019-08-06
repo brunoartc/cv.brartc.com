@@ -67,7 +67,7 @@
             </li>-->
           </ul>
           <p>
-            Email: <a href="https://brartc.com/">[disponivel no site]</a>
+            Email: <a href="/cdn-cgi/l/email-protection">[oculto]</a>
           </p>
           <p>
             Github: <a href="https://github.com/brunoartc">brunoartc</a>
@@ -302,7 +302,15 @@
       <a href="https://github.com/sproogen/resume-theme" target="_blank">💡</a></p>
   </div>
 
-
+  <script>
+    (async () => {
+      if (navigator.webdriver || document.visibilityState === 'prerender' || !location.hostname) {
+        return;
+      }
+      document.querySelector('a[href="/cdn-cgi/l/email-protection"]').innerHTML = `eu\x40${location.hostname}`;
+      document.querySelector('a[href="/cdn-cgi/l/email-protection"]').href = `\x6dailto:eu\x40${location.hostname}`;
+    })();
+  </script>
 
 </body>
 
