@@ -593,3 +593,13 @@ p.quote {
     margin-top: 1em;
   }
 }
+mark a {
+  color: orange;
+  text-decoration: none;
+}
+
+mark a:hover {
+  color: red;
+  text-decoration: none;
+}
+
